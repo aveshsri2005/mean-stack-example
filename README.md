@@ -1,4 +1,4 @@
-# MEAN Stack Example Project
+# MEAN Stack Sample Project
 MEAN Stack App- MongoDB, Express, Angular, Node, Grunt
 
 
