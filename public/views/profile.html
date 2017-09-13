@@ -1,0 +1,78 @@
+<!-- Top content -->
+<div class="top-content">        	
+    <div class="inner-bg">
+        <div class="container">
+        	
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2 text">
+                    <h1><strong>Artists</strong> Profile Details</h1>
+                    <div class="description">
+                    	<!-- <p>
+                        	This is a free responsive <strong>"login and register forms"</strong> template made with Bootstrap. 
+                        	Download it on <a href="#"><strong>Avesh</strong></a>, 
+                        	customize and use it as you like!
+                    	</p> -->
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+
+
+        <!-- profile section starts here -->
+        <div class="col-sm-12" ng-controller="ProfileController">
+            <div class="form-box">
+                <div class="form-top">
+                    <div class="form-top-left">
+                        <h3>Update you profile</h3>
+                        <p>Fill in the form below to update your profile:</p>
+                    </div>
+                    <div class="form-top-right">
+                        <i class="fa fa-pencil"></i>
+                    </div>
+                    <span class="alert alert-success" ng-if="message">{{message}}</span>
+                </div>
+                <div class="form-bottom">
+                    <form name="profileForm" ng-submit="profile()" novalidate class="registration-form">
+
+                        <div class="form-group" ng-class="{'has-error': profileForm.reknown.$dirty && profileForm.reknown.$invalid}">
+                            <label class="sr-only" for="form-reknown">Reknown</label>
+                            <input type="text" name="reknown" placeholder="Reknown" class="form-reknown form-control" id="form-reknown" ng-model="user.reknown" required>
+                            <span class="help-block" ng-show="profileForm.reknown.$error.required && profileForm.reknown.$dirty ">Required</span>
+                        </div>
+
+                         <div class="form-group" ng-class="{'has-error': profileForm.biodata.$dirty && profileForm.biodata.$invalid}">
+                            <label class="sr-only" for="form-biodata">Biodata</label>
+                            <input type="textarea" name="biodata" placeholder="Reknown" class="form-biodata form-control" id="form-biodata" ng-model="user.biodata" required>
+                            <span class="help-block" ng-show="profileForm.biodata.$error.required && profileForm.biodata.$dirty ">Required</span>
+                        </div>
+
+                       
+
+                        <button type="submit" class="btn" ng-disabled="!profileForm.$valid">Update!</button>
+                    </form>
+                </div>
+            </div>  
+        </div>
+        <!-- profile section ends here -->
+
+            </div>                    
+        </div>
+    </div>
+    
+</div>
+
+<!-- Footer -->
+<footer>
+	<div class="container">
+		<div class="row">
+			
+			<div class="col-sm-8 col-sm-offset-2">
+				<div class="footer-border"></div>
+				<p>Made by Avesh Srivastava at <a href="#" target="_blank"><strong>AveshTechnology</strong></a> 
+					having a lot of fun. <i class="fa fa-smile-o"></i></p>
+			</div>
+			
+		</div>
+	</div>
+</footer>

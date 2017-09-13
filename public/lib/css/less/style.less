@@ -1,0 +1,86 @@
+@main-font: 'Roboto', sans-serif;
+@secondary-font: Verdana, sans-serif;
+@fancy-font: fantasy, sans-serif;
+@main-color: #888;
+@secondary-color: #555;
+@contrast-color: yellow;
+@alert-color: red;
+
+
+html, body {
+    font-family: @main-font;
+    font-size: 16px;
+    font-weight: 300;
+    color: @main-color;
+    line-height: 30px;
+    text-align: center;
+}
+
+body, h1, h2 {
+  margin: 0;
+  font-family: @secondary-color;
+}
+
+h1,h2 {
+  margin: 10px 0 0 0;
+  color: @secondary-color;
+  font-size: 38px;
+  font-weight: 100;
+  line-height: 50px;
+}
+
+h3 {
+    font-size: 22px;
+    font-weight: 300;
+    color: @secondary-color;
+    line-height: 30px;
+}
+
+body {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+
+    dl {
+    border: double;
+    padding: 1em;
+    display: block;
+    width: 80%;
+
+    & + p {
+      display: none;
+    }
+
+    &:empty {
+      display: none;
+
+      & + p {
+        color: @alert-color;
+        display: block;
+      }
+
+    }
+
+    dt {
+      font-family: @fancy-font;
+      font-size: 1.5em;
+      color: @secondary-color;
+
+      &:hover {
+        color: @alert-color;
+        cursor: pointer;
+      }
+    }
+
+    dd {
+      font-family: @secondary-font;
+      margin: 0 0 10px 55px;
+      font-size: 1em;
+    }
+
+  }
+
+}

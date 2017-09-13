@@ -1,0 +1,48 @@
+<!-- login section ends here -->
+<div class="col-sm-5" ng-controller="LoginController">                          
+    <div class="form-box">
+        <div class="form-top">
+            <div class="form-top-left">
+                <h3>Login to our site</h3>
+                <p>Enter username and password to log on: {{myname}}</p>
+            </div>
+            <div class="form-top-right">
+                <i class="fa fa-lock"></i>
+            </div>
+              <span class="alert alert-success" ng-if="message">{{message}}</span>
+        </div>
+        <div class="form-bottom">
+            <form name="loginForm" novalidate ng-submit="login()" class="login-form">  
+                <div class="form-group" ng-class="{'has-error': loginForm.username.$dirty && loginForm.username.$invalid}">
+                    <label class="sr-only" for="form-username">Username</label>
+                    <input type="text" name="username" placeholder="Username..." class="form-username form-control" id="form-username" required ng-model="user.username">
+                    <span class="help-block" ng-show="loginForm.username.$error.required && loginForm.username.$dirty ">Required</span>
+                </div>
+                <div class="form-group" ng-class="{'has-error': loginForm.username.$dirty &&  loginForm.password.$invalid}">
+                    <label class="sr-only" for="form-password">Password</label>
+                    <input type="password" name="password" placeholder="Password..." class="form-password form-control" id="form-password" required ng-model="user.password" >
+                    <span class="help-block" ng-show="loginForm.password.$error.required && loginForm.password.$dirty">Required</span>
+                </div>
+                <button type="submit" class="btn" ng-disabled="!loginForm.$valid">Sign in!</button>
+            </form>
+        </div>
+    </div>
+    <div class="social-login">
+        <h3>...or login with:</h3>
+        <div class="social-login-buttons">
+            <a class="btn btn-link-2" href="#">
+                <i class="fa fa-facebook"></i> Facebook
+            </a>
+            <a class="btn btn-link-2" href="#">
+                <i class="fa fa-twitter"></i> Twitter
+            </a>
+            <a class="btn btn-link-2" href="#">
+                <i class="fa fa-google-plus"></i> Google Plus
+            </a>
+        </div>
+    </div>    
+</div>
+<!-- login section ends here -->
+
+<div class="col-sm-1 middle-border"></div>
+<div class="col-sm-1"></div>
